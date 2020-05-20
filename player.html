@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillzacky</title>
+    <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="font-player.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="containerz">
+        <div class="player">
+            <div class="layar" data-video="images/bg.jpg">
+                <!--modal-direct-auth-->
+                <div id="load" data-offer="https://google.com" data-act="direct">
+                    <span class="proses"></span>
+                </div>
+                <div class="playPrimary">
+                    <img src="images/play.png">
+                </div>
+            </div>
+            <div class="control">
+                <div class="playSecondary">
+                    <button class="lengserbtn"><span id="play" class="icon-play"></span></button>
+                </div>
+                <div class="waktu" data-waktu="0">
+                    <div class="stream">
+                        <blink>00:00:00</blink>/00:00:00
+                    </div>
+                    <div class="live">
+                        <blink><svg width="8" height="8">
+                                <ellipse style="fill:red;" cx="50%" cy="50%" rx="48%" ry="48%"></ellipse>
+                            </svg>
+                            Live</blink>
+                    </div>
+                </div>
+                <div class="progressbar">
+                    <div class="psbar red stripes">
+                        <span style="width: 100%"></span>
+                    </div>
+                </div>
+                <div class="quality lengserup">
+                    <button class="lengserbtn"><span class="icon-atur"></span></button>
+                    <ul class="lengserup-content">
+                        <li>4K·2160p</li>
+                        <li>HD·1080p</li>
+                        <li>HD·720p</li>
+                        <li>ED·480p</li>
+                    </ul>
+                </div>
+                <div class="volume lengserup">
+                    <button class="lengserbtn"><span class="icon-v-4"></span></button>
+                    <ul class="lengserup-content">
+                        <li><input type="range"></li>
+                    </ul>
+                </div>
+                <div class="minmax">
+                    <button class="lengserbtn"><span id="mm" class="icon-s-max"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="https://via.placeholder.com/150" height="50">
+    <div class="modal fade" id="auth" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    test
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="player.js"></script>
+</body>
+
+</html>

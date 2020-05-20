@@ -1,0 +1,409 @@
+html {
+    background-color: burlywood;
+}
+
+.containerz {
+    background-color: azure;
+    margin: 20%;
+}
+
+.player {
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+}
+
+.layar {
+    width: 100%;
+    height: 92%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+}
+
+.playPrimary img {
+    transition: transform .2s;
+}
+
+.playPrimary img:hover {
+    transform: scale(1.2);
+}
+
+.playPrimary {
+    margin: auto;
+}
+
+.loading2play {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loading {
+    margin: auto;
+    background-image: url('images/loading.gif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.control {
+    height: 8%;
+    padding: 0 1.6%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.playSecondary {
+    margin: auto;
+    order: 1;
+    flex: 1;
+}
+
+.playSecondary:hover {
+    color: #ff0000;
+}
+
+.waktu {
+    display: flex;
+    font-size: small;
+    order: 2;
+    flex: 1;
+}
+
+.live {
+    margin: auto;
+}
+
+.stream {
+    margin: auto;
+}
+
+.progressbar {
+    display: flex;
+    order: 3;
+    flex: 18;
+}
+
+.quality {
+    margin: auto;
+    text-align: right;
+    order: 4;
+    flex: 1;
+}
+
+.volume {
+    margin: auto;
+    text-align: right;
+    order: 5;
+    flex: 1;
+}
+
+.minmax {
+    text-align: right;
+    margin: auto;
+    order: 6;
+    flex: 1;
+}
+
+/* ================== Time ===================== */
+
+@keyframes blink {
+    0% {
+        opacity: 0
+    }
+
+    49% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+blink {
+    animation: blink 1s infinite;
+}
+
+/* ================== loading ===================== */
+
+.psbar {
+    margin: auto;
+    display: flex;
+    background-color: rgb(36, 36, 36);
+    height: 18%;
+    width: 96%;
+    padding: 1px;
+}
+
+.psbar span {
+    margin: auto;
+    display: inline-block;
+    height: 100%;
+    transition: width .4s ease-in-out;
+}
+
+.blue span {
+    background-color: #34c2e3;
+}
+
+.orange span {
+    background-color: #fecf23;
+    background-image: linear-gradient(top, #fecf23, #fd9215);
+}
+
+.red span {
+    background-color: #ff0000;
+    background-image: linear-gradient(top, #ff0000, #fa8e8e);
+}
+
+.green span {
+    background-color: #a5df41;
+    background-image: linear-gradient(top, #a5df41, #4ca916);
+}
+
+.stripes span {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%,
+            transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75%,
+            transparent 75%, transparent);
+
+    animation: animate-stripes 3s linear infinite;
+}
+
+@keyframes animate-stripes {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 60px 0;
+    }
+}
+
+.shine span {
+    position: relative;
+}
+
+.shine span::after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 3px;
+    animation: animate-shine 2s ease-out infinite;
+}
+
+@keyframes animate-shine {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+        width: 95%;
+    }
+}
+
+.glow span {
+    box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+    animation: animate-glow 1s ease-out infinite;
+}
+
+@keyframes animate-glow {
+    0% {
+        box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+    }
+
+    50% {
+        box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;
+    }
+
+    100% {
+        box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+    }
+}
+
+/* ================== end loading ===================== */
+
+/* ================== lengser up ================== */
+.lengserbtn {
+    background-color: #000;
+    color: #fff;
+    padding: 1px;
+    border: none;
+    transition: transform .2s;
+}
+
+.lengserup {
+    position: relative;
+    display: inline-block;
+}
+
+.lengserup-content {
+    right: 0;
+    text-align: center;
+    display: none;
+    position: absolute;
+    bottom: 92%;
+    background-color: #000;
+    box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
+    z-index: 1;
+}
+
+ul.lengserup-content {
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.lengserup-content li {
+    font-size: small;
+    color: #fff;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.lengserup-content li:hover {
+    background-color: rgb(36, 36, 36)
+}
+
+.lengserup-content li:active {
+    background-color: rgb(36, 36, 36)
+}
+
+.lengserup:hover .lengserup-content {
+    display: block;
+}
+
+.lengserup:hover .lengserbtn {
+    color: #ff0000;
+}
+
+.lengserbtn:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+/* ================== end lengser up ================== */
+
+@media (max-width: 575.98px) {
+    .player {
+        width: 488px;
+        height: 252px;
+    }
+
+    .playPrimary img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .loading {
+        width: 64px;
+        height: 64px;
+    }
+
+    .control {
+        height: 10%;
+    }
+
+    .layar {
+        height: 90%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .player {
+        width: 512px;
+        height: 288px;
+    }
+
+    .playPrimary img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .loading {
+        width: 66px;
+        height: 66px;
+    }
+
+    .control {
+        height: 10%;
+    }
+
+    .layar {
+        height: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .player {
+        width: 640px;
+        height: 360px;
+    }
+
+    .playPrimary img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loading {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .player {
+        width: 848px;
+        height: 477px;
+    }
+
+    .playPrimary img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .loading {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .player {
+        width: 912px;
+        height: 513px;
+    }
+
+    .playPrimary img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .loading {
+        width: 80px;
+        height: 80px;
+    }
+}
